@@ -45,7 +45,7 @@ And include the matchers in `spec/spec_helper.rb`:
 
 ```ruby
 RSpec.configure do |config|
-  config.include StateMachinesActiveRecordRspec::Matchers
+  config.include StateMachinesActiverecordRspec::Matchers
 end
 ```
 

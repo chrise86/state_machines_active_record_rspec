@@ -1,13 +1,13 @@
 require 'matchers/states/matcher'
 
-module StateMachinesActiveRecordRspec
+module StateMachinesActiverecordRspec
   module Matchers
     def have_states(state, *states)
       HaveStateMatcher.new(states.unshift(state))
     end
     alias_method :have_state, :have_states
 
-    class HaveStateMatcher < StateMachinesActiveRecordRspec::Matchers::States::Matcher
+    class HaveStateMatcher < StateMachinesActiverecordRspec::Matchers::States::Matcher
       def matches_states?(states)
         return false if undefined_states?
         return false if incorrect_value?

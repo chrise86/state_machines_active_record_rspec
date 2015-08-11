@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe StateMachinesActiveRecordRspec::Matchers::HaveStateMatcher do
+describe StateMachinesActiverecordRspec::Matchers::HaveStateMatcher do
   describe '#matches?' do
     before { @matcher = described_class.new([:rad, :not_so_rad, { on: :radical_state }]) }
 

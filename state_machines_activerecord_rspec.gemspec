@@ -5,7 +5,7 @@ require 'state_machines_activerecord_rspec/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'state_machines_activerecord_rspec'
-  spec.version       = StateMachinesActiveRecordRspec::VERSION
+  spec.version       = StateMachinesActiverecordRspec::VERSION
   spec.authors       = ['modocache']
   spec.email         = ['modocache@gmail.com']
   spec.description   = %q{ RSpec matchers for state_machine. }

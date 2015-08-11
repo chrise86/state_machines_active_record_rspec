@@ -1,13 +1,13 @@
 require 'matchers/events/matcher'
 
-module StateMachinesActiveRecordRspec
+module StateMachinesActiverecordRspec
   module Matchers
     def handle_events(value, *values)
       HandleEventMatcher.new(values.unshift(value))
     end
     alias_method :handle_event, :handle_events
 
-    class HandleEventMatcher < StateMachinesActiveRecordRspec::Matchers::Events::Matcher
+    class HandleEventMatcher < StateMachinesActiverecordRspec::Matchers::Events::Matcher
       def matches_events?(events)
         !invalid_events?
       end

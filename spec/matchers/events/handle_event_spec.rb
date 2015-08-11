@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe StateMachinesActiveRecordRspec::Matchers::HandleEventMatcher do
+describe StateMachinesActiverecordRspec::Matchers::HandleEventMatcher do
   describe '#matches?' do
     context 'when :when state is specified' do
       context 'but the state doesn\'t exist' do

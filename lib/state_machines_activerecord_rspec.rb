@@ -5,7 +5,7 @@ require 'matchers/events/reject_event'
 require 'matchers/states/have_state'
 require 'matchers/states/reject_state'
 
-module StateMachinesActiveRecordRspec
+module StateMachinesActiverecordRspec
   module Matchers
   end
 end
