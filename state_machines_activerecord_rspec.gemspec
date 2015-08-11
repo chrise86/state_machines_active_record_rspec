@@ -6,10 +6,10 @@ require 'state_machines_activerecord_rspec/version'
 Gem::Specification.new do |spec|
   spec.name          = 'state_machines_activerecord_rspec'
   spec.version       = StateMachinesActiverecordRspec::VERSION
-  spec.authors       = ['modocache']
-  spec.email         = ['modocache@gmail.com']
-  spec.description   = %q{ RSpec matchers for state_machine. }
-  spec.summary       = %q{ RSpec matchers for state_machine. }
+  spec.authors       = ['chrise86']
+  spec.email         = ['chris@chrise.net']
+  spec.description   = %q{ RSpec matchers for state_machines-activerecord. }
+  spec.summary       = %q{ RSpec matchers for state_machines-activerecord. }
   spec.homepage      = 'http://github.com/chrise86/state_machines_activerecord_rspec'
   spec.license       = 'MIT'
 
