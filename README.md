@@ -1,9 +1,6 @@
-# state_machine_rspec
+# state_machines_activerecord_rspec
 
-[![Build Status](https://travis-ci.org/modocache/state_machine_rspec.png?branch=master)](https://travis-ci.org/modocache/state_machine_rspec)
-
-Custom matchers for [pluginaweek/state_machine](https://github.com/pluginaweek/state_machine).
-
+Custom matchers for [state-machines/state_machines-activerecord](https://github.com/state-machines/state_machines-activerecord) **forked from [modocache/state_machine_rspec](https://github.com/modocache/state_machine_rspec)**.
 
 ## Matchers
 
@@ -40,7 +37,7 @@ Add these lines to your application's Gemfile:
 
 ```ruby
 group :test do
-  gem 'state_machine_rspec'
+  gem 'state_machines_activerecord_rspec'
 end
 ```
 
@@ -48,7 +45,7 @@ And include the matchers in `spec/spec_helper.rb`:
 
 ```ruby
 RSpec.configure do |config|
-  config.include StateMachineRspec::Matchers
+  config.include StateMachinesActiveRecordRspec::Matchers
 end
 ```
 

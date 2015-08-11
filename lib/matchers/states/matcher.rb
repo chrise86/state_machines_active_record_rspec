@@ -1,6 +1,6 @@
 require 'active_support/core_ext/array/extract_options'
 
-module StateMachineRspec
+module StateMachinesActiveRecordRspec
   module Matchers
     module States
       class Matcher

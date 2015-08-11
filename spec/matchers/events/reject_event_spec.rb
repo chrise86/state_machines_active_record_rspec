@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe StateMachineRspec::Matchers::RejectEventMatcher do
+describe StateMachinesActiveRecordRspec::Matchers::RejectEventMatcher do
   describe '#matches?' do
     context 'when :when state is specified' do
       context 'but that state doesn\'t exist' do

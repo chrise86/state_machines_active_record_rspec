@@ -15,7 +15,7 @@ describe Vehicle do
           initial_state = vehicle.state
           vehicle.crash!
 
-          expect(vehicle.state).to  eq initial_state
+          expect(vehicle.state).to eq initial_state
         end
       end
 
@@ -23,7 +23,7 @@ describe Vehicle do
         before { allow(vehicle).to receive_messages(:passed_inspection => false) }
         it 'stalls' do
           vehicle.crash!
-          expect(vehicle.state).to  eq :stalled.to_s
+          expect(vehicle.state).to eq :stalled.to_s
         end
       end
     end
@@ -31,7 +31,7 @@ describe Vehicle do
 
   shared_examples 'speedless' do
     it 'does not respond to speed' do
-      expect { vehicle.speed }.to raise_error NoMethodError
+      expect { vehicle.speed }.to raise_error StateMachines::InvalidContext
     end
   end
 
@@ -46,7 +46,7 @@ describe Vehicle do
       vehicle.seatbelt_on = false
       vehicle.put_on_seatbelt
 
-      expect(vehicle.seatbelt_on).to  be_truthy
+      expect(vehicle.seatbelt_on).to be_truthy
     end
   end
 
@@ -83,7 +83,7 @@ describe Vehicle do
                               when: :third_gear }
 
     it 'has an initial state of "parked"' do
-      expect(vehicle).to  be_parked
+      expect(vehicle).to be_parked
     end
 
     it 'has an initial alarm state of "active"' do
@@ -113,7 +113,7 @@ describe Vehicle do
       describe 'ignite' do
         it 'should transition to idling' do
           vehicle.ignite!
-          expect(vehicle).to  be_idling
+          expect(vehicle).to be_idling
         end
       end
     end
@@ -135,14 +135,14 @@ describe Vehicle do
       describe 'park' do
         it 'should transition to a parked state' do
           vehicle.park!
-          expect(vehicle).to  be_parked
+          expect(vehicle).to be_parked
         end
       end
 
       describe 'shift up' do
         it 'should shift into first gear' do
           vehicle.shift_up!
-          expect(vehicle).to  be_first_gear
+          expect(vehicle).to be_first_gear
         end
       end
 
@@ -158,7 +158,7 @@ describe Vehicle do
       describe 'ignite' do
         it 'remains stalled' do
           vehicle.ignite!
-          expect(vehicle).to  be_stalled
+          expect(vehicle).to be_stalled
         end
       end
 
@@ -167,7 +167,7 @@ describe Vehicle do
           before { allow(vehicle).to receive_messages(:auto_shop_busy => true) }
           it 'remains stalled' do
             vehicle.repair!
-            expect(vehicle).to  be_stalled
+            expect(vehicle).to be_stalled
           end
         end
 
@@ -175,7 +175,7 @@ describe Vehicle do
           before { allow(vehicle).to receive_messages(:auto_shop_busy => false) }
           it 'is parked' do
             vehicle.repair!
-            expect(vehicle).to  be_parked
+            expect(vehicle).to be_parked
           end
         end
       end
@@ -190,21 +190,21 @@ describe Vehicle do
       describe 'park' do
         it 'parks' do
           vehicle.park!
-          expect(vehicle).to  be_parked
+          expect(vehicle).to be_parked
         end
       end
 
       describe 'idle' do
         it 'idles' do
           vehicle.idle!
-          expect(vehicle).to  be_idling
+          expect(vehicle).to be_idling
         end
       end
 
       describe 'shift up' do
         it 'shift into second gear' do
           vehicle.shift_up!
-          expect(vehicle).to  be_second_gear
+          expect(vehicle).to be_second_gear
         end
       end
 
@@ -220,14 +220,14 @@ describe Vehicle do
       describe 'shift up' do
         it 'shifts into third gear' do
           vehicle.shift_up!
-          expect(vehicle).to  be_third_gear
+          expect(vehicle).to be_third_gear
         end
       end
 
       describe 'shift down' do
         it 'shifts back into first gear' do
           vehicle.shift_down!
-          expect(vehicle).to  be_first_gear
+          expect(vehicle).to be_first_gear
         end
       end
 
@@ -243,7 +243,7 @@ describe Vehicle do
       describe 'shift down' do
         it 'shifts back into second gear' do
           vehicle.shift_down!
-          expect(vehicle).to  be_second_gear
+          expect(vehicle).to be_second_gear
         end
       end
 

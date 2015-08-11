@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe StateMachineRspec::Matchers::RejectStateMatcher do
+describe StateMachinesActiveRecordRspec::Matchers::RejectStateMatcher do
   describe '#matches?' do
     context 'when :on state machine attribute is specified' do
       before { @matcher = described_class.new([:supportive, on: :environment]) }

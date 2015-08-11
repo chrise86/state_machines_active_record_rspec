@@ -1,5 +1,5 @@
-require 'state_machine'
-require 'state_machine_rspec'
+require 'state_machines-activerecord'
+require 'state_machines_activerecord_rspec'
 require 'timecop'
 require 'rspec/its'
 
@@ -8,5 +8,5 @@ RSpec.configure do |config|
   config.filter_run :focus
   config.order = 'random'
 
-  config.include StateMachineRspec::Matchers
+  config.include StateMachinesActiveRecordRspec::Matchers
 end
