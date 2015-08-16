@@ -7,7 +7,7 @@ describe StateMachinesActiverecordRspec::Matchers::RejectStateMatcher do
       context 'but that state machine doesn\'t exist' do
         before { @class = Class.new }
         it 'raises' do
-          expect { @matcher.matches? @class.new }.to raise_error
+          expect { @matcher.matches? @class.new }.to raise_error NoMethodError
         end
       end
 
